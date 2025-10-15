@@ -5,10 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-<h4>Bu page Orders </h4>
-{%for item in order %}
-<h1>{{item.order_date}} </h1>
-<h1>{{item.required_date}}</h1>
-{%endfor%}
+<!--<h4>Bu page Orders </h4>-->
+<!--{%for item in order %}-->
+<!--<h1>{{item.order_date}} </h1>-->
+<!--<h1>{{item.required_date}}</h1>-->
+<!--{%endfor%}-->
+<div class="row">
+    <div class="col-6">
+        {%for item in order%}
+        <div class="card" style="width: 18rem;">
+            {%if item.photo%}
+            <img src="{{item.photo.url}}" class="card-img-top" alt="...">
+            {%else%}
+           <img src="https://i.pinimg.com/1200x/eb/d7/d4/ebd7d41071f941578aaff6863e0ab27f.jpg" class="card-img-top" alt="...">
+            {%endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{item.order_date}}</h5>
+                <p class="card-text">{{item.required_date}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+</div>
+
+
+
 </body>
 </html>

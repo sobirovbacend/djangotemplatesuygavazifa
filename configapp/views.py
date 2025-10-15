@@ -6,6 +6,7 @@ def category(request):
     cat = Categories.objects.all()
     content = {
         "cat":cat,
+
     }
     return render(request,  'category.html',content)
 
@@ -40,7 +41,7 @@ def allfuncmodel(request):
     content = {
         "cat":cat,
         "product":product,
-        "ordetail":ordetail,
+        "orderdt":ordetail,
         "order":order,
     }
 
